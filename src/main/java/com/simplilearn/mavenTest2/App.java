@@ -3,6 +3,8 @@ package com.simplilearn.mavenTest2;
 import java.nio.file.Paths;
 import java.util.List;
 import java.nio.file.Files;
+
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -52,6 +54,7 @@ public class App {
         completeCheckout();
 
     }
+    @Test
     public static void setUp() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\PC\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
@@ -62,6 +65,7 @@ public class App {
             driver.quit();
         }
     }
+    @Test
     private static void login() {
         driver.get("https://demowebshop.tricentis.com/login");
         driver.findElement(By.id("Email")).sendKeys("ugnius.motiejunas10@example.com");
