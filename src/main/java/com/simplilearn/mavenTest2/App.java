@@ -34,7 +34,7 @@ public class App {
         driver.findElement(By.id("LastName")).sendKeys("Doe");
         
         // Email should be unique for each registration
-        driver.findElement(By.id("Email")).sendKeys("ugnius.motiejunas10@example.com");
+        driver.findElement(By.id("Email")).sendKeys("ugnius.motiejunas15@example.com");
         driver.findElement(By.id("Password")).sendKeys("Test1234");
         driver.findElement(By.id("ConfirmPassword")).sendKeys("Test1234");
         
@@ -50,7 +50,7 @@ public class App {
         tearDown();
         setUp();
         login();
-        addItemsToCart("C:\\Users\\PC\\eclipse-workspace\\mavenTest2\\src\\main\\java\\com\\simplilearn\\mavenTest2\\data1.txt");
+        addItemsToCart("C:\\Users\\PC\\eclipse-workspace\\testMaven\\src\\main\\java\\com\\simplilearn\\mavenTest2\\data1.txt");
         completeCheckout();
 
     }
@@ -60,6 +60,7 @@ public class App {
         driver = new ChromeDriver();
         // Add user creation steps here using WebDriver
     }
+    @Test
     public static void tearDown() {
 		if (driver != null) {
             driver.quit();
@@ -68,7 +69,7 @@ public class App {
     @Test
     private static void login() {
         driver.get("https://demowebshop.tricentis.com/login");
-        driver.findElement(By.id("Email")).sendKeys("ugnius.motiejunas10@example.com");
+        driver.findElement(By.id("Email")).sendKeys("ugnius.motiejunas15@example.com");
         driver.findElement(By.id("Password")).sendKeys("Test1234");
         driver.findElement(By.cssSelector(".button-1.login-button")).click();
     }
