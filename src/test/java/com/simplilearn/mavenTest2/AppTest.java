@@ -36,6 +36,12 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
+    @Test
+    public void testSomething() {
+        // Your test logic here
+        assertTrue(true); // Example assertion
+    }
+    @Test
     public void testApp()
     {
         assertTrue( true );
