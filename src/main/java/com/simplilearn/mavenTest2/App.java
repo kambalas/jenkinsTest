@@ -8,10 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test; 
-
 
 
 
@@ -56,19 +52,16 @@ public class App {
         completeCheckout();
 
     }
-    @BeforeEach
     public static void setUp() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\PC\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
         // Add user creation steps here using WebDriver
     }
-    @AfterEach
     public static void tearDown() {
 		if (driver != null) {
             driver.quit();
         }
     }
-    @Test
     private static void login() {
         driver.get("https://demowebshop.tricentis.com/login");
         driver.findElement(By.id("Email")).sendKeys("ugnius.motiejunas10@example.com");
