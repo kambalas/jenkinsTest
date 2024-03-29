@@ -21,26 +21,15 @@
         <version>3.141.59</version>
     </dependency>
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
+        <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
         <version>5.7.0</version>
-      <scope>test</scope>
     </dependency>
+    <!-- JUnit Jupiter Engine to run the tests -->
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-engine</artifactId>
         <version>5.7.0</version>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
-    	<groupId>com.simplilearn</groupId>
-    	<artifactId>captcha</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-    	<groupId>com.simplilearn</groupId>
-    	<artifactId>mavenproject1</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>
 </project>
