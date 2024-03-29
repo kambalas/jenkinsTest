@@ -3,6 +3,9 @@ package com.simplilearn.mavenTest2;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -11,7 +14,6 @@ import junit.framework.TestSuite;
  * Unit test for simple App.
  */
 public class AppTest 
-    extends TestCase
 {
 	private WebDriver driver;
 	@Test
@@ -20,22 +22,6 @@ public class AppTest
         driver = new ChromeDriver();
         driver.get("https://demowebshop.tricentis.com/");
     }
-    public AppTest( String testName )
-    {
-        super( testName );
-    } 
-
-    /**
-     * @return the suite of tests being tested
-     */
-//    public static Test suite()
-//    {
-//        return new TestSuite( AppTest.class );
-//    }
-
-    /**
-     * Rigourous Test :-)
-     */
     @Test
     public void testSomething() {
         // Your test logic here
