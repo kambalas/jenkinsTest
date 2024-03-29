@@ -3,8 +3,7 @@ package com.simplilearn.mavenTest2;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import junit.framework.Test;
+import org.junit.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
@@ -15,7 +14,7 @@ public class AppTest
     extends TestCase
 {
 	private WebDriver driver;
-	@BeforeEach
+	@Test
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\PC\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
@@ -29,10 +28,10 @@ public class AppTest
     /**
      * @return the suite of tests being tested
      */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
+//    public static Test suite()
+//    {
+//        return new TestSuite( AppTest.class );
+//    }
 
     /**
      * Rigourous Test :-)
