@@ -24,17 +24,10 @@ import org.junit.Test;
 public class AppTest {
     private static WebDriver driver;
 
-    @BeforeClass
-    public static void setUp() {
+    @Before
+    public void setUp() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\PC\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
-    }
-
-    @AfterClass
-    public static void testSomething() {
-        if (driver != null) {
-            driver.quit();
-        }
     }
     public void test(String fileName) throws IOException, InterruptedException {
         driver.get("https://demowebshop.tricentis.com/");
@@ -108,10 +101,15 @@ public class AppTest {
     public void  Test1() throws IOException, InterruptedException {
         test("C:\\Users\\PC\\eclipse-workspace\\testMaven\\src\\main\\java\\com\\simplilearn\\mavenTest2\\data1.txt");
     }
-
     @Test
     public void Test2() throws IOException, InterruptedException {
         test("C:\\Users\\PC\\eclipse-workspace\\testMaven\\src\\main\\java\\com\\simplilearn\\mavenTest2\\data2.txt");
+    }
+    @After
+    public void testSomething() {
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }
      
